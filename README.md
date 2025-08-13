@@ -1,3 +1,4 @@
+## Türkçe
 # 🛡️ Linux Security Hardening Script
 
 Bu proje, Debian/Fedora/Ubuntu tabanlı sistemlerde temel güvenlik sertleşmesini (hardening) kolayca uygulamak için geliştirilmiş bir **otomasyon scriptidir**.  
@@ -35,5 +36,54 @@ SSH, UFW, Fail2Ban, MFA (Google Authenticator) ve sistem ayarlarını tek komutl
 ```bash
 git clone https://github.com/isaramet/security-linux.git
 cd security-linux
+chmod +x security.sh
+./security.sh
+```
+
+## English
+# 🛡️ Linux Security Hardening Script
+
+A lightweight automation script for Debian/Ubuntu-based systems that applies essential security hardening with a single command.  
+Includes SSH security, UFW firewall configuration, Fail2Ban setup, MFA (Google Authenticator) integration, and additional system-level protections.
+
+---
+
+## 🚀 Features
+
+### **🔐 SSH Security**
+- Change SSH port (`NEW_SSH_PORT` variable)
+- Disable root login (`PermitRootLogin no`)
+- Disable password authentication (`PasswordAuthentication no`)
+- 30-minute session timeout
+- Limit maximum authentication attempts (`MaxAuthTries`)
+- MFA support (Google Authenticator)
+- Detailed logging (`LogLevel VERBOSE`)
+- Backup `sshd_config` before changes
+
+### **🛡️ UFW Firewall**
+- Default policy: `deny incoming`, `allow outgoing`
+- Open ports:
+  - HTTP (80)
+  - HTTPS (443)
+  - Custom ports (e.g., 8443)
+  - New SSH port
+
+### **🚫 Fail2Ban**
+- Protection against SSH brute-force attacks
+- Automatically monitors the new SSH port
+- 24-hour ban after multiple failed login attempts
+
+### **⚙️ System Hardening**
+- Unauthorized access warning banner (`/etc/issue.net`)
+- Timestamped command history
+- ICMP ping rate limiting
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/username/linux-security-hardening.git
+cd linux-security-hardening
 chmod +x security.sh
 ./security.sh
