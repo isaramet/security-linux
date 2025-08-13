@@ -1,6 +1,6 @@
 # 🛡️ Linux Security Hardening Script
 
-Bu proje, Debian/Ubuntu tabanlı sistemlerde temel güvenlik sertleşmesini (hardening) kolayca uygulamak için geliştirilmiş bir **otomasyon scriptidir**.  
+Bu proje, Debian/Fedora/Ubuntu tabanlı sistemlerde temel güvenlik sertleşmesini (hardening) kolayca uygulamak için geliştirilmiş bir **otomasyon scriptidir**.  
 SSH, UFW, Fail2Ban, MFA (Google Authenticator) ve sistem ayarlarını tek komutla güvenli hale getirir.  
 
 ## 🚀 Özellikler
@@ -33,7 +33,7 @@ SSH, UFW, Fail2Ban, MFA (Google Authenticator) ve sistem ayarlarını tek komutl
 ## 📦 Kurulum
 
 ```bash
-git clone https://github.com/kullanici/linux-security-hardening.git
+git clone https://github.com/isaramet/security-linux.git
 cd linux-security-hardening
 chmod +x security.sh
 ./security.sh
