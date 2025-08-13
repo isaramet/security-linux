@@ -34,6 +34,6 @@ SSH, UFW, Fail2Ban, MFA (Google Authenticator) ve sistem ayarlarını tek komutl
 
 ```bash
 git clone https://github.com/isaramet/security-linux.git
-cd linux-security-hardening
+cd security-linux
 chmod +x security.sh
 ./security.sh
